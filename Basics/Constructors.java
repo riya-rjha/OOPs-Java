@@ -125,5 +125,49 @@ public class Constructors {
         System.out.println("Properties of labrador: " + labrador.name + " " + labrador.breed + labrador.age + " ");
         labrador.getName();
 
+        // Wrapper classes
+
+        int n = 10;
+        Integer num = 10;
+        System.out.println(n);
+        System.out.println(num.equals(n)); // true (checks for values)
+
+        // Works as here swapping takes place by value
+        Integer a = 23;
+        Integer b = 24;
+        System.out.println("Values before swapping: " + a + " " + b);
+        Integer temp = a;
+        a = b;
+        b = temp;
+        System.out.println("Values after swapping: " + a + " " + b);
+
+        // Pass by value
+        swap(a, b);
+        System.out.println("Values after swapping: " + a + " " + b);
+
+        int d = 2;
+        int e = 34;
+        System.out.println("Values before swapping: " + d + " " + e);
+        swap2(d, e); // Pass by value
+        System.out.println("Values after swapping: " + d + " " + e);
+
+        final int MAX_VALUE = Integer.MAX_VALUE;
+        System.out.println(MAX_VALUE);
+
+        // MAX_VALUE = 32; // throws error
+        
+    }
+
+    // Call by reference
+
+    public static void swap(Integer a, Integer b) {
+        Integer temp = a;
+        a = b;
+        b = temp;
+    }
+    public static void swap2(int a, int b) {
+        int temp = a;
+        a = b;
+        b = temp;
     }
 }
