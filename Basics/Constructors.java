@@ -20,7 +20,7 @@ public class Constructors {
         }
     }
 
-    // Constructor Chaining
+    // Constructor Chaining + Constructor Overloading
 
     public class Operations {
         int a, b, c;
@@ -47,6 +47,42 @@ public class Constructors {
         }
     }
 
+    public class Animal {
+        String name;
+        int age;
+
+        public Animal(String name, int age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        public void getName() {
+            System.out.println("Name of animal is " + name);
+        }
+
+    }
+
+    public class Dog extends Animal {
+        String name;
+        int age;
+        String breed;
+
+        Dog(String name, String breed, int age) {
+            super(name, age);
+            this.breed = breed;
+        }
+
+        public void getBreed() {
+            System.out.println("Breed of the dog is " + this.breed);
+            System.out.println("Breed of the dog is " + breed); // same answer as above
+        }
+
+        @Override
+        public void getName() {
+            super.getName();
+        }
+    }
+
     public static void main(String[] args) {
         Student std1 = new Student(12, "HRJ", 42.349f);
 
@@ -70,6 +106,24 @@ public class Constructors {
 
         Operations op2 = constructor.new Operations();
         System.out.println("Final values of a, b, c: " + op2.a + " " + op2.b + " " + op2.c);
+
+        // Constructor using another Constructor
+
+        Student std2 = new Student(32, "Bobby", 32.3f);
+        System.out.println(std2.name);
+        std2 = std1;
+        System.out.println(std2.name);
+
+        // Constructor chaining using "super" keyword
+        Animal animal = constructor.new Animal("Doggy", 7);
+        System.out.println("Name and age of animal is : " + animal.name + " " + animal.age);
+
+        Dog labrador = constructor.new Dog("Rock", "Labrador", 5);
+        labrador.getBreed();
+        System.out.println(labrador.name); // null -> This is because Dog has it's own name field and here we are trying
+        // to access name of the Dog labrador and not that of Animal
+        System.out.println("Properties of labrador: " + labrador.name + " " + labrador.breed + labrador.age + " ");
+        labrador.getName();
 
     }
 }
