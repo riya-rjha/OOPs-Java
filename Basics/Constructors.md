@@ -1,6 +1,6 @@
 # Constructor
 
-A constructor is a special type of function that is automaticaly invoked during the time of class creation. By default, a constructor is always initialized, and to create a new constructor, you need to intialize values of the class.
+A constructor is a special type of function that is automaticaly invoked during the time of object creation. By default, a constructor is always initialized, and to create a new constructor, you need to intialize values of the class.
 
 ### this keyword
 
