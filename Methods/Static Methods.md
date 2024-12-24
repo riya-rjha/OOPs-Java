@@ -59,4 +59,4 @@ Through singleton class, only one object is created as a global object and it's 
 - static variable
 - public static method to return the instance (only this can be accessed by outside files)
 
-Refer to <a href="">**Singleton Class**</a> for more references.
+Refer to <a href="Singleton.java">**Singleton Class**</a> for more references.
