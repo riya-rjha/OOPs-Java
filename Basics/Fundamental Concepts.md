@@ -43,3 +43,5 @@ It is a class that wraps integer data within itself. For eg. Integer class is a 
 ### final keyword
 
 **final** keyword cannot be changed. It is immutable. The final method cannot be overridden and final classes cannot be subclassed, or inherited.
+
+**Note:** The dot operator (.) binds the the reference to the instance variable or method, allowing access to static & non-static methods. 

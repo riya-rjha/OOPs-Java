@@ -33,4 +33,17 @@ Class_name.static_variable
 
 ### Accessing static variables
 
-We cannot access a non-static method or variable in a static context or method. This is because to run the non-static method, an instance or an object of the class is required. And a non-static method is treated as an instance/object, whereas a static method is not dependent on objects. Logically, you can't access non-static methods because a static method would require an instance of class, but the non-static method is itself an instace, and that would further require an instantiation of it's own class. Static methods are loaded first in memory. 
+- We cannot access a non-static method or variable in a static context or method. This is because to run the non-static method, an instance or an object of the class is required. And a non-static method is treated as an instance/object, whereas a static method is not dependent on objects. 
+- Logically, you can't access non-static methods because a static method would require an instance of class, but the **non-static method is itself an instace**, and that would further require an instantiation of it's own class. 
+- Static methods are loaded first in memory. 
+- **Static methods can access only static methods** but non-static can accept both. 
+- It is important to note that a non-static method or variable can be accessed in a non-static class or method. Logically, the non static method knows that it will get it's object created. It's super class too knows that it will also have it's object created. So, both the classes' objects will be created in the main function which is static. 
+- We should not use this keyword with static, because by convention it is accessed through it's className. Also, we can't use non-static variables of the class in that method as it would account to an object being used in the static-method, and objects are non-static. The objects would require creation of an instance of the class.
+- A non-static class created in the file would give an error when trying to access the methods without static reference. This is because the class is then dependent on the outer class. But when the class is made static, it becomes independent of the outer class. 
+- *Static methods are bound to classes & not objects*. 
+- The outermost class is the top level class that is non-static. Non-public classes can be declared within the top level class.
+- Top level classes do not require instantitation of another class to be accessed. 
+- The static code block is executed first and only once.
+
+## Internal working of statements
+

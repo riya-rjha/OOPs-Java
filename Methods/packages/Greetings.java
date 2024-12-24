@@ -11,6 +11,7 @@ public class Greetings {
     }
 
     public static class Details {
+        // public required as the file is in different directory
         public String name;
         public int age;
         public float salary;
