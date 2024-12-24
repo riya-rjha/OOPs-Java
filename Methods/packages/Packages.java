@@ -8,9 +8,11 @@ public class Packages {
         System.out.println(New.Name);
         New.Name = "Robert";
         System.out.println(New.Name);
+        System.out.println(p.toString()); // returns internal toString() method
+        System.out.println(nn.toString()); // object not returned
     }
 
-    static{
+    static {
         System.out.println("Executed only once and first");
     }
 
@@ -19,6 +21,12 @@ public class Packages {
 
         New() {
             New.Name = "Rob";
+        }
+
+        @Override
+        public String toString() {
+            System.out.println("We have changed the return type of internal toString() method.");
+            return Name;
         }
     }
 

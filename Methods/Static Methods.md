@@ -47,3 +47,16 @@ Class_name.static_variable
 
 ## Internal working of statements
 
+**_System.out.println_** - println is a method, out is a variable and System is a class. 
+
+When you try to print the object, internally it is checked whether it is a string or not. And since class is not a string, it first prints the class name followed by the hexadecimal value, and that is the reason why we get an output of absurd values when printing the object.
+
+## Singleton Class
+
+Through singleton class, only one object is created as a global object and it's access is provided throughout the application. Following are the requirements for a singleton class:
+
+- private constructor to prevent instantiation from outside class
+- static variable
+- public static method to return the instance (only this can be accessed by outside files)
+
+Refer to <a href="">**Singleton Class**</a> for more references.

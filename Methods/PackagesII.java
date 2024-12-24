@@ -19,7 +19,17 @@ public class PackagesII {
 
         System.out.println(Details.population); // Shows value of current population
 
-        
+        // Singleton sg = new Singleton();//error as Singleton constructor is private
+        // this defers from creating objects of the class
+
+        // Singleton obj1 = Singleton.getInstance();
+        // Singleton obj2 = Singleton.getInstance();
+
+        System.out.println(Singleton.getName());
+        Singleton.setName("");
+        System.out.println(Singleton.getName()); // name still null
+        Singleton.setName("Robert Frost");
+        System.out.println(Singleton.getName()); // name set to Robert Frost
 
     }
 }
