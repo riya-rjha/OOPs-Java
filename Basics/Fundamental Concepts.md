@@ -34,7 +34,7 @@ Primitive data types point to the Stack memory whereas the objects point to the 
 
 ### Wrapper class
 
-It is a class that wraps integer data within itself. For eg. Integer class is a Wrapper class and has several pre defined methods in Java, one such being compare, used commonly in Lambda expressions. A wrapper class has two parts: **Autoboxing** and **Unboxing**. Autoboxing is converting a primitive data type to a Wrapper class, whereas Unboxing is converting a Wrapper class data type to a primitive data type.
+It is a class that wraps data within itself. For eg. Integer class is a Wrapper class and has several pre defined methods in Java, one such being compare, used commonly in Lambda expressions. A wrapper class has two parts: **Autoboxing** and **Unboxing**. Autoboxing is converting a primitive data type to a Wrapper class, whereas Unboxing is converting a Wrapper class data type to a primitive data type.
 
 **Important:** Primitive data types can be changed by their values but not Wrapper classes, as Wrapper classes are immutable. They are objects that are passed by reference through means of value. This means that the value passed is a copy of the reference. 
 
