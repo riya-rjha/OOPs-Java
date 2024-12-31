@@ -86,7 +86,7 @@ public class Polymorphism {
         System.out.println(sq.returnSum(312, 13, 2));
         Square.printMethod(); // static method of Square accessed, Override not possible with annotation proved
 
-        square.printMethod(); // overriding not possible, parent class method works
+        // square.printMethod(); // overriding not possible, parent class method works
         // Also shows warning that static method not being accessed the right way
         
     }
