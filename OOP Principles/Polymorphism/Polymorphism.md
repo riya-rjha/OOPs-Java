@@ -10,13 +10,11 @@ The literal meaning of Polymorphism is many ways to represent a single entity. P
 
 In compile time polymorphism, the same function is defined in the parent class and sub classes, however, the return type, or the parameters are different. The body might be same. Methods can be overloaded in Java, *Object Overloading is not supported in Java*. Eg. Multiple Constructors formation is an example of Compile Time Polymorphism. **Different order of parameters in function can also create Method Overloading.**
 
-### Why is this called Compile Time Polymorphism?
 
-```
+### Why is this called Compile Time Polymorphism?
 
 This is because Java determines at compile time which constructor should be called and is method overloading working here or not. It checks for errors during compile time only and checks for the most specific constructor match available in the class.
 
-```
 
 2. **Runtime Polymorphism** (Dynamic Polymorphism) (Method Overriding) 
 
