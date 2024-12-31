@@ -8,6 +8,10 @@ public class Polymorphism {
         public double returnArea() {
             return 111.11f;
         }
+
+        static void printMethod() {
+            System.out.println("This is a static method that cannot be overridden");
+        }
     }
 
     public class Square extends Shape {
@@ -22,6 +26,11 @@ public class Polymorphism {
 
         public int returnSum(int a, int b, int c) {
             return a + b + c;
+        }
+
+        // @Override // Does not override as the parent method is static
+        static void printMethod() {
+            System.out.println("Static method is in the parent class and this will not be called");
         }
 
     }
@@ -71,9 +80,14 @@ public class Polymorphism {
         triangle.getArea();
 
         // Method Overloading
-        
+
         Square sq = polymorphism.new Square();
         System.out.println(sq.returnSum(3, 12));
         System.out.println(sq.returnSum(312, 13, 2));
+        Square.printMethod(); // static method of Square accessed, Override not possible with annotation proved
+
+        square.printMethod(); // overriding not possible, parent class method works
+        // Also shows warning that static method not being accessed the right way
+        
     }
 }
