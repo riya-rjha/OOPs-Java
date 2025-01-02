@@ -5,18 +5,21 @@ public class AccessModifiers {
 
     public class ChildClass2 extends ParentClass {
         ChildClass2() {
-            new AccessModifiers2().super(42, 3);
+            accessModifiers2.super(42, 3);
         }
-        String newName = name; // protected variabel can be accessed in subclass in another package
+
+        String newName = name; // protected variable can be accessed in subclass in another package
         // since the child class has all information about the parent class
-        public void returnProtectedName(){
+
+        public void returnProtectedName() {
             System.out.println(newName);
         }
     }
 
+    static AccessModifiers2 accessModifiers2 = new AccessModifiers2();
+
     public static void main(String[] args) {
         AccessModifiers accessModifiers = new AccessModifiers();
-        AccessModifiers2 accessModifiers2 = new AccessModifiers2();
         ParentClass parent = accessModifiers2.new ParentClass(42, 3);
         parent.display();
         // Access public and protected members
