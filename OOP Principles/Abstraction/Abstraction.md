@@ -15,10 +15,16 @@
 # Abstract Classes
 
 - Abstract classes means those classes that show only an idea of the function, with the function name and the implementation of the method is done in the child class.
+
 - Also known as Child Class Responsibility, the child class overrides the abstract methods.
+
 - The class containing abstract method needs to be declared as an abstract class.
+
 - Objects can't be created for an abstract class as to call the method of the abstract class we require a body. And since the body does not exist, due to only idea remaining and no function, Parent class objects can't be instantiated.
+
 - However, Parent classes can be used as referential variables as this way we can use the non-abstract methods through the child class object type. 
+
 - We cannot create abstract Constructors too.
 - There remains no use of using abstract static methods as they cannot be overridden in child class. Although, we can call static methods and use them with their implementation in the main function.
+
 - We cannot have final abstract classes as final classes cannot be overridden or inherited. 
