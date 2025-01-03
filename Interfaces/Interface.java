@@ -3,13 +3,20 @@ package Interfaces;
 public class Interface {
 
     public interface Car {
-        int maxSpeed = 0;
+        int maxSpeed = 0; // public, final and static
 
-        void engineStart();
+        void engineStart(); // public and abstract
 
         void musicPlayerStart();
 
         void engineStop(int maxSpeed);
+
+        // Cannot create a constructor of Interface
+        // Car(){}
+
+        public static void reinit() {
+            // maxSpeed = 13; // can not be initialized
+        }
     }
 
     public interface InnerCar extends Car {
@@ -83,10 +90,13 @@ public class Interface {
         public int valueOfNumInA() {
             return A.num;
         }
+
         public int valueOfNumInB() {
             return B.num;
         }
     }
+
+    //
 
     public static void main(String[] args) {
         Interface interface1 = new Interface();
