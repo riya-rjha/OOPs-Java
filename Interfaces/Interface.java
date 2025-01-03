@@ -96,7 +96,18 @@ public class Interface {
         }
     }
 
-    //
+    // Custom Annotations
+
+    public @interface MyCustomAnnotation {
+        String value();
+    }
+
+    public class CreatingAnnotations {
+        @MyCustomAnnotation(value = "Creating Custom Annotations")
+        public void callAnotation() {
+            System.out.println("This is a custom annotation");
+        }
+    }
 
     public static void main(String[] args) {
         Interface interface1 = new Interface();
@@ -115,6 +126,20 @@ public class Interface {
         C c = interface1.new C();
         System.out.println(c.valueOfNumInA());
         System.out.println(c.valueOfNumInB());
+
+        // Custom Annotations
+        CreatingAnnotations creatingAnnotations = interface1.new CreatingAnnotations();
+
+        // Access the annotation using reflection
+        MyCustomAnnotation myCustomAnnotation = null;
+        try {
+            myCustomAnnotation = creatingAnnotations.getClass().getMethod("callAnotation")
+                    .getAnnotation(MyCustomAnnotation.class);
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(myCustomAnnotation.value());
 
     }
 }
