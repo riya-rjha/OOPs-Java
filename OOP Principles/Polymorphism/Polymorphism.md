@@ -2,14 +2,13 @@
 
 Refer to <a href="Polymorphism.java">Polymorphism</a> for codes.
 
-The literal meaning of Polymorphism is many ways to represent a single entity. Polymorphism means the representation of functions of the parent class and it's inherited class in different ways. For eg. The same function getArea() in the parent class Shape is again defined in the child class Square. This is an example of Runtime Polymorphis.
+The literal meaning of Polymorphism is many ways to represent a single entity. Polymorphism means the representation of functions of the parent class and it's inherited class in different ways. For eg. The same function getArea() in the parent class Shape is again defined in the child class Square. This is an example of Runtime Polymorphism.
 
 # Types of Polymorphism
 
 1. **Compile Time Polymorphism** (Static Polymorphism) (Method Overloading)
 
-In compile time polymorphism, the same function is defined in the parent class and sub classes, however, the return type, or the parameters are different. The body might be same. Methods can be overloaded in Java, *Object Overloading is not supported in Java*. Eg. Multiple Constructors formation is an example of Compile Time Polymorphism. **Different order of parameters in function can also create Method Overloading.**
-
+In compile time polymorphism, the same function is defined in the parent class and sub classes, however, the return type, or the parameters are different. The body might be same. Methods can be overloaded in Java, *Object Overloading is not supported in Java*. Eg. Multiple Constructors formation is an example of Compile Time Polymorphism. **Different order of parameters in function can also create Method Overloading.** But this does not mean *(int a, int b)* written as *(int b, int a)* will create compile time polymorphism. It means *(int a, int b)* when changed to *(String a, int b)* will create Compile time polymorphism.
 
 ### Why is this called Compile Time Polymorphism?
 
@@ -28,7 +27,7 @@ Parent_class par = new Child_class()
 
 ## How does Java determine which method it has to access?
 
-The Referential class determines which all methods are accessible within the scope whereas the Object class determines which method is supposed to be called at runtime. This is governed by Dynamic Method Dispatch by which is a mechanism in Java that works to call the overidden method at runtime and not compile time. Referential class methods and fields are excessed during compile-time and object class methods and fields are checked during runtime.
+The Referential class determines which all methods are accessible within the scope whereas the Object class determines which method is supposed to be called at runtime. This is governed by **Dynamic Method Dispatch** which is a mechanism in Java that works to call the overidden method at runtime and not compile time. Referential class methods and fields are excessed during compile-time and object class methods and fields are checked during runtime.
 
 ## Static and Final Keywords
 
@@ -42,6 +41,6 @@ The Referential class determines which all methods are accessible within the sco
 
 - When you declare a class as final, it's methods are implicitly declared as final too.
 
-- **We cannot override static methods in Java.** This is because anyhow the parent class will be executed for the child class, and when the static method is called, it being not dependent on objects executes the parent class static method. In logical terms, **Overriding depends on objects**, as to which ever object will be called, it will execute the method of the Object class type and since **Static methods do not depend on objects**, hence, **Static methods cannot be overridden**.
+- **We cannot override static methods in Java.** This is because anyhow the parent class will be executed for the child class, and when the static method is called, it being not dependent on objects executes the parent class static method. In logical terms, **Overriding depends on objects**, as to which ever object will be called, it will execute the method of the Object class type and since **Static methods do not depend on objects**, and objects cannot be overridden, hence, **Static methods cannot be overridden**.
 
 - Overriding and Overloading do not depend on instance variables, they work ony on methods. This is because instance variables depend on the reference type, whereas methods depend on object class type.

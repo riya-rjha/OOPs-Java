@@ -16,7 +16,7 @@ When we initialize objects, we can do so by two means. First is to initialize th
 
 We cannot call a child class constructor on an object of the Parent class. This is because the child is itslef initialized by a parent constructor. 
 
-Here, the parameters of only the referential variable can be accessed. It has access to only it's own methods and variables. The referntial variable is stored in the heap memory and this is during **compile time** (Compile Time Polymorphism) , when it is checked for errors that whether there is an attemp to access those variables which are out of the reach of the referential class. The object class type is checked during **runtime** for errors as the actual methods of the parent class are overridden by the child class (Runtime Polymorphism).
+Here, the parameters of only the referential variable can be accessed. It has access to only it's own methods and variables. The referential variable is stored in the heap memory and this is during **compile time** (Compile Time Polymorphism) , when it is checked for errors that whether there is an attemp to access those variables which are out of the reach of the referential class. The object class type is checked during **runtime** for errors as the actual methods of the parent class are overridden by the child class (Runtime Polymorphism).
 
 **_Note:_**
 
